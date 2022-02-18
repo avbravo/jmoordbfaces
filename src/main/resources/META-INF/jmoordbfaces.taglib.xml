@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<facelet-taglib version="3.0"
+        xmlns="https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd">
+
+    <namespace>http://jmoordbfaces.com/taglib</namespace>
+	<composite-library-name>jmoordbfaces</composite-library-name>
+</facelet-taglib>

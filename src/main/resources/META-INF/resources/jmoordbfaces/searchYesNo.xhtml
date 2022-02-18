@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <composite:interface >
+
+        <composite:attribute name="update" default =":form:dataTable" />
+        <composite:attribute name="rendered" default ="true" />
+
+        <composite:attribute name="label" />
+        <composite:attribute name="id"  />
+        <composite:attribute name="value" />
+        <composite:attribute name="colSpans" default="2,4,6"/>
+        <composite:attribute name="columns" default="3" />
+
+
+        <composite:attribute name="colMd" default="2"/>
+        <composite:attribute name="labelColMd" default="2"/>
+        <composite:attribute name="search"  
+                             method-signature="java.lang.String action()" />
+
+
+    </composite:interface>
+    <composite:implementation>
+
+
+
+
+        <!--<p:panel >-->
+
+        <p:remoteCommand name="remotesearchyesno"
+
+                         update="#{cc.attrs.update}"/>
+
+        <p:panelGrid  columns="#{cc.attrs.columns}" size="xs" colSpans="#{cc.attrs.colSpans}"> 
+
+            <p:outputLabel value="#{cc.attrs.label}"/>
+
+            <p:selectOneMenu value="#{cc.attrs.value}" id="#{cc.attrs.id}"
+                        rendered="#{cc.attrs.rendered}"     >
+                <f:selectItem itemLabel="#{app['button.yes']}" itemValue="si" />
+                <f:selectItem itemLabel="#{app['button.no']}" itemValue="no" />
+
+            </p:selectOneMenu>
+
+
+            <p:commandButton update="#{cc.attrs.update}"
+                             look="info"
+                             oncomplete="remotesearch()"
+                             iconAwesome="fa-filter" 
+           rendered="#{cc.attrs.rendered}" 
+                             title="#{app['button.search']}" 
+                             action="#{cc.attrs.search}"/>
+
+
+
+
+
+        </p:panelGrid>
+        <!--</p:panel>-->
+    </composite:implementation>
+
+</html>
