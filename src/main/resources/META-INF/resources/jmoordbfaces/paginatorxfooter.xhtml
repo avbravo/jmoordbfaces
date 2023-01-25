@@ -13,8 +13,8 @@
 
     </composite:interface>
     <composite:implementation>
-        <span class="p-text-bold">#{app['label.pagina']}  #{cc.attrs.controller.loadPaginator(cc.attrs.entity).page}  #{app['label.of']} #{cc.attrs.controller.loadPaginator(cc.attrs.entity).numberOfPage} /#{app['label.totalRecords']} #{cc.attrs.controller.loadPaginator(cc.attrs.entity).totalRecords}</span>
-        <span class="p-text-bold"><p:outputLabel value="/#{app['label.filtro']}  #{cc.attrs.controller.loadPaginator(cc.attrs.entity).title}"/></span>
+        <span class="p-text-bold">#{core['label.pagina']}  #{cc.attrs.controller.loadPaginator(cc.attrs.entity).page}  #{core['label.of']} #{cc.attrs.controller.loadPaginator(cc.attrs.entity).numberOfPage} /#{core['label.totalRecords']} #{cc.attrs.controller.loadPaginator(cc.attrs.entity).totalRecords}</span>
+        <span class="p-text-bold"><p:outputLabel value="/#{core['label.filtro']}  #{cc.attrs.controller.loadPaginator(cc.attrs.entity).title}"/></span>
 
     </composite:implementation>
 

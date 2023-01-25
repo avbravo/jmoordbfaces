@@ -55,7 +55,7 @@
     </composite:interface>
     <composite:implementation>
 
-        <p:panel title="#{app['login.title']}" look="primary" collapsed="false" >
+        <p:panel title="#{core['login.title']}" look="primary" collapsed="false" >
             <p:row>
                 <p:column medium-screen="3">
                     <h:outputText value="#{cc.attrs.labelusername}"  />
@@ -69,12 +69,12 @@
                 </p:column>
 
             </p:row>
-            <p:row tooltip="#{app['tooltip.password']}">
+            <p:row tooltip="#{core['tooltip.password']}">
                 <p:column medium-screen="3">
-                    <h:outputText value="#{app['login.password']}" />
+                    <h:outputText value="#{core['login.password']}" />
                 </p:column>
                 <p:column medium-screen="9">
-                    <p:inputText id="password" value="#{cc.attrs.fieldpassword}"  placeholder="#{app['login.password']}" type="password">
+                    <p:inputText id="password" value="#{cc.attrs.fieldpassword}"  placeholder="#{core['login.password']}" type="password">
                         <f:facet name="prepend">
                             <p:iconAwesome name="key" />
                         </f:facet>
@@ -94,7 +94,7 @@
                                      rendered="#{cc.attrs.showone}"
                                      value="#{cc.attrs.valueone}"  
                                      required="#{cc.attrs.requiredone}"  
-                                     requiredMessage="#{cc.attrs.requiredMessageone} #{app['info.required']}"
+                                     requiredMessage="#{cc.attrs.requiredMessageone} #{core['info.required']}"
                                      update="#{cc.attrs.updateone}"
                                      onchange="#{cc.attrs.onchangeone}"
                                      >
@@ -124,7 +124,7 @@
                                      rendered="#{cc.attrs.showtwo}"
                                      value="#{cc.attrs.valuetwo}"  
                                      required="#{cc.attrs.requiredtwo}"  
-                                     requiredMessage="#{cc.attrs.requiredMessagetwo} #{app['info.required']}"
+                                     requiredMessage="#{cc.attrs.requiredMessagetwo} #{core['info.required']}"
                                      update="#{cc.attrs.updatetwo}"
                                      onchange="#{cc.attrs.onchangetwo}"
                                      >
@@ -148,7 +148,7 @@
 
             <p:row>
                 <p:column span="8" >
-                    <p:commandButton look="primary btn-block" value="#{app['button.login']}" 
+                    <p:commandButton look="primary btn-block" value="#{core['button.login']}" 
                                      action="#{cc.attrs.dologin}"
                          
                                      icon="log-in" size="lg"

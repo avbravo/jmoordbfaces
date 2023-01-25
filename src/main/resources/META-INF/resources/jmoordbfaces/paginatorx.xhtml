@@ -26,7 +26,7 @@
             <p:toolbarGroup align="left">
                 <p:commandButton   icon="fa fa-step-backward"
                                    styleClass="ui-priority-primary"
-                                   title="#{app['button.first']}"
+                                   title="#{core['button.first']}"
                                    oncomplete="remoteshowall();"
                                    action="#{cc.attrs.controller.first(cc.attrs.entity)}"
                                    update="#{cc.attrs.updateDatatable}" >
@@ -35,7 +35,7 @@
 
                 <p:commandButton   icon="fa fa-caret-left"
                                    styleClass="ui-priority-primary"
-                                   title="#{app['button.back']}"
+                                   title="#{core['button.back']}"
                                    oncomplete="remoteshowall();"
                                    action="#{cc.attrs.controller.back(cc.attrs.entity)}"
                                    update="#{cc.attrs.updateDatatable}" >
@@ -43,7 +43,7 @@
                 </p:commandButton>
 
                 <p:commandButton   icon="fa fa-play"
-                                   title="#{app['button.next']}"
+                                   title="#{core['button.next']}"
                                    oncomplete="remoteshowall();"
                                    action="#{cc.attrs.controller.next(cc.attrs.entity)}"
                                    update="#{cc.attrs.updateDatatable}" >
@@ -53,7 +53,7 @@
 
 
                 <p:commandButton  icon="fa fa-step-forward"
-                                  title="#{app['button.last']}"
+                                  title="#{core['button.last']}"
                                   oncomplete="remoteshowall();"
                                   action="#{cc.attrs.controller.last(cc.attrs.entity)}"                                
                                   update="#{cc.attrs.updateDatatable}" >

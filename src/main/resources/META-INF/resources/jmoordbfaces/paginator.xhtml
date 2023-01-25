@@ -62,7 +62,7 @@
 
                 <p:commandButton   icon="fa fa-step-backward" 
                                    styleClass="ui-priority-primary"
-                                   title="#{app['button.first']}" 
+                                   title="#{core['button.first']}" 
                                    
                                    oncomplete="remoteshowall();"
                                    action="#{cc.attrs.controller[cc.attrs.first]}"
@@ -73,7 +73,7 @@
 
                 <p:commandButton   icon="fa fa-caret-left" 
                                    styleClass="ui-priority-primary"
-                                   title="#{app['button.back']}" 
+                                   title="#{core['button.back']}" 
                                    
                                    oncomplete="remoteshowall();"
                                    action="#{cc.attrs.controller[cc.attrs.back]}"
@@ -82,7 +82,7 @@
                 </p:commandButton>
 
                 <p:commandButton   icon="fa fa-play"  
-                                   title="#{app['button.next']}" 
+                                   title="#{core['button.next']}" 
                                    oncomplete="remoteshowall();"
                                    action="#{cc.attrs.controller[cc.attrs.next]}" 
                                    
@@ -92,7 +92,7 @@
                 </p:commandButton>
 
                 <p:commandButton  icon="fa fa-step-forward"  
-                                  title="#{app['button.last']}" 
+                                  title="#{core['button.last']}" 
                                   oncomplete="remoteshowall();"
                                   
                                   action="#{cc.attrs.controller[cc.attrs.last]}"  
@@ -114,7 +114,7 @@
                 </p:selectOneMenu> 
 
                 <p:commandButton icon="fa fa-file-o"  
-                                 title="#{app['button.new']}"   
+                                 title="#{core['button.new']}"   
                                  action="#{cc.attrs.controller[cc.attrs.prepareGoNew]}"  
                                  
                                  rendered="#{cc.attrs.renderedNew}"
@@ -125,7 +125,7 @@
                 
                 
                 <p:commandButton icon="fa fa-file-o"  
-                                 title="#{app['button.new']}"   
+                                 title="#{core['button.new']}"   
                                  action="#{cc.attrs.controller[cc.attrs.prepareGoNewDialog]}"  
                           process="@this,:form:panelGroupNew"
                                  rendered="#{cc.attrs.renderedNew}"
@@ -138,7 +138,7 @@
 
 
                 <p:commandButton icon="fa fa-print"                                                                                                         
-                                 title="#{app['button.print']}"    
+                                 title="#{core['button.print']}"    
                                  rendered="#{cc.attrs.renderedPrint}"  
                                  action="#{cc.attrs.controller[cc.attrs.printAll]}"  
                                  ajax="false"
@@ -150,7 +150,7 @@
                                   action="#{cc.attrs.controller[cc.attrs.clear]}"     
                                   rendered="#{cc.attrs.renderedClear}"    
                                   
-                                  title="#{app['button.all']}"
+                                  title="#{core['button.all']}"
                                   update=":form:dataTable :form:content"
                                   oncomplete="remoteshowall()"
                                   > 
@@ -161,7 +161,7 @@
 
 
                 <p:commandButton  
-                                  title="#{app['button.search']}"
+                                  title="#{core['button.search']}"
                                   immediate="true"
                                   rendered="#{cc.attrs.renderedSearch}" 
                                   icon="fa fa-search" 
@@ -171,7 +171,7 @@
                 
                 
                 <p:commandButton  
-                                  title="#{app['button.delete']}"
+                                  title="#{core['button.delete']}"
                                   immediate="true"
                                   rendered="#{cc.attrs.renderedDeleted}" 
                                   icon="fa fa-trash-o" 
@@ -189,11 +189,11 @@
                                
                                  >
 
-                    <f:selectItem itemLabel="#{app['rows.l25']}" itemValue="25" />
-                    <f:selectItem itemLabel="#{app['rows.l15']}" itemValue="15" />
-                    <f:selectItem itemLabel="#{app['rows.l10']}" itemValue="10" />
-                    <f:selectItem itemLabel="#{app['rows.l5']}" itemValue="5" />
-                    <f:selectItem itemLabel="#{app['rows.l40']}" itemValue="40" />
+                    <f:selectItem itemLabel="#{core['rows.l25']}" itemValue="25" />
+                    <f:selectItem itemLabel="#{core['rows.l15']}" itemValue="15" />
+                    <f:selectItem itemLabel="#{core['rows.l10']}" itemValue="10" />
+                    <f:selectItem itemLabel="#{core['rows.l5']}" itemValue="5" />
+                    <f:selectItem itemLabel="#{core['rows.l40']}" itemValue="40" />
 
                 </p:selectOneMenu>
             </p:toolbarGroup>

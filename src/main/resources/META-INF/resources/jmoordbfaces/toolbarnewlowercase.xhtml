@@ -41,12 +41,12 @@
                 <p:outputLabel value="#{cc.attrs.label}"/>
                 <p:inputText       
                     style="#{cc.attrs.lowercase} ?text-transform: uppercase:''"
-                    placeholder="#{app['info.ingresenuevodato']}"
+                    placeholder="#{core['info.ingresenuevodato']}"
                     value="#{cc.attrs.value}" 
                     disabled="#{cc.attrs.disabled}" 
                     readonly="#{cc.attrs.readonly}" 
                     required="false"
-                    requiredMessage="#{cc.attrs.label} #{app['info.required']}"
+                    requiredMessage="#{cc.attrs.label} #{core['info.required']}"
                     immediate="true"
                     onkeypress="if (event.keyCode == 13) {
                                 remoteid();
@@ -55,7 +55,7 @@
                     <f:facet name="prepend">
                         <p:commandButton  iconAwesome="fa-eraser"         
                                           look="success"
-                                          title="#{app['button.clear']}"
+                                          title="#{core['button.clear']}"
                                           
                                           action="#{cc.attrs.controller[cc.attrs.prepareNew]}"
                                           update=":form:content" > 
@@ -69,7 +69,7 @@
                                          look="primary"
                                          iconAwesome="fa-share" 
                                          rendered="#{cc.attrs.rendererList}" 
-                                         title="#{app['button.search']}" 
+                                         title="#{core['button.search']}" 
                                         action="#{cc.attrs.controller[cc.attrs.prepareGoList]}">
                             
                             <f:attribute name="url" value="#{cc.attrs.url}"/>

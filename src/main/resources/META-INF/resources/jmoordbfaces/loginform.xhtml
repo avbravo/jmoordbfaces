@@ -24,9 +24,9 @@
                         <h:graphicImage rendered="#{!accessController.isForgetPassword}"  library="jmoordbjsf" name="iconos/login.png"  style="width:80px;" class="responsive-img circle"/>
                         <h:graphicImage rendered="#{accessController.isForgetPassword and !accessController.isSendOtp}"  library="jmoordbjsf" name="iconos/emails240.png"  style="width:80px;" class="responsive-img circle"/>
                         <p> <h4><p:outputLabel rendered="#{!accessController.isForgetPassword}" class="login titulo" value="#{msg['application.title']}" style="font-weight:bold"/></h4></p>
-                        <p> <p:outputLabel rendered="#{!accessController.isForgetPassword}"  class="textonormal" value="#{app['login.title']}" style="font-weight:bold;color:black"/></p>
-                        <p> <p:outputLabel rendered="#{accessController.isForgetPassword and !accessController.isSendOtp }"  class="textonormal" value="#{app['login.solicitudotp']}" style="font-weight:bold;color:black"/></p>
-                        <p> <p:outputLabel rendered="#{accessController.isForgetPassword and accessController.isSendOtp and !accessController.isValidOtp}"  class="textonormal" value="#{app['opt.emailenviado']}" style="font-weight:bold;color:black"/></p>
+                        <p> <p:outputLabel rendered="#{!accessController.isForgetPassword}"  class="textonormal" value="#{core['login.title']}" style="font-weight:bold;color:black"/></p>
+                        <p> <p:outputLabel rendered="#{accessController.isForgetPassword and !accessController.isSendOtp }"  class="textonormal" value="#{core['login.solicitudotp']}" style="font-weight:bold;color:black"/></p>
+                        <p> <p:outputLabel rendered="#{accessController.isForgetPassword and accessController.isSendOtp and !accessController.isValidOtp}"  class="textonormal" value="#{core['opt.emailenviado']}" style="font-weight:bold;color:black"/></p>
                     </div>
                 </div>
 
@@ -67,17 +67,17 @@
                                 <div class="input-field" >
 
 
-                                    <p:inputText value="#{accessController.username}" required="true"  requiredMessage="#{app['login.username']}"
+                                    <p:inputText value="#{accessController.username}" required="true"  requiredMessage="#{core['login.username']}"
                                                  class="validate valid"
                                                  rendered="#{!accessController.isvalidUsername}" id="username"/>
 
-                                    <p:outputLabel value="#{app['login.username']}" rendered="#{!accessController.isvalidUsername}" />
+                                    <p:outputLabel value="#{core['login.username']}" rendered="#{!accessController.isvalidUsername}" />
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="center">
-                                    <p:commandButton value="#{app['button.next']}"  
+                                    <p:commandButton value="#{core['button.next']}"  
                                                      styleClass="edit-button rounded-button ui-button-success" 
                                                      style="width:100%; background-color: #6b0392;"
 
@@ -106,7 +106,7 @@
                                 <p:menuButton value=""   class="dropdown-content"  styleClass="pmenuButton">
                                     <p:menuitem value="" action="#{accessController.back()}"  update=":form:growl, :form"  >
                                         <i class="pi pi-angle-left" style="font-size: 2rem"></i>
-                                        <p:outputLabel value="#{app['button.back']}" style="color:#6b0392 ;font-size: 10;" />
+                                        <p:outputLabel value="#{core['button.back']}" style="color:#6b0392 ;font-size: 10;" />
                                     </p:menuitem>
                                 </p:menuButton>
                             </div>
@@ -146,7 +146,7 @@
 
                             <div class="row">
                                 <div class="col s12 m12 l12" >
-                                    <p:outputLabel value="#{app['login.password']}" />
+                                    <p:outputLabel value="#{core['login.password']}" />
                                     <span class="ui-input-icon-right">
                                         <button id="commandButtonEye" type="button" onclick="mostrarPasswordGeneral(this, '#form\\:password');" >
                                             <i class="pi pi-eye" style="font-size: 1rem"></i>
@@ -165,7 +165,7 @@
                             <div class="row">
                                 <div class="center">
 
-                                    <p:commandButton value="#{app['button.login']}"  
+                                    <p:commandButton value="#{core['button.login']}"  
                                                      styleClass="edit-button rounded-button ui-button-success" 
                                                      style="width:100%; background-color: #6b0392;"
                                                      action="#{accessController.login()}" 
@@ -199,7 +199,7 @@
                                                    rendered="#{accessController.isSendOtp}"
                                                    />
 
-                                    <p:outputLabel value="#{app['login.email']}"  rendered="#{!accessController.isSendOtp}"/>
+                                    <p:outputLabel value="#{core['login.email']}"  rendered="#{!accessController.isSendOtp}"/>
                                 </div>
 
 
@@ -207,7 +207,7 @@
                         </div>
                         <div class="row">
                             <div class="col m12 l12">
-                                <p:commandButton value="#{app['button.sendotp']}"  styleClass="edit-button rounded-button ui-button-success" 
+                                <p:commandButton value="#{core['button.sendotp']}"  styleClass="edit-button rounded-button ui-button-success" 
                                                  style="width:80%; background-color: #4CAF50;"
                                                  action="#{accessController.sendOtp()}" 
                                                  rendered="#{!accessController.isSendOtp}"
@@ -221,7 +221,7 @@
 
                             <div class="row">
                                 <div class="col s8 m8 l8">
-                                     <p:outputLabel value="#{app['otp.ingreseotprecibido']}" style="color:black" rendered="#{!accessController.isValidOtp}"/>
+                                     <p:outputLabel value="#{core['otp.ingreseotprecibido']}" style="color:black" rendered="#{!accessController.isValidOtp}"/>
                                 </div>
                                 
                             </div>
@@ -234,7 +234,7 @@
                                         <p:inputText value="#{accessController.otpRecibido}"  id="optrecibido" rendered="#{!accessController.isValidOtp}"
                                                     class="validate valid"
                                                      />
-                                        <p:outputLabel value="#{app['label.otp']}"  rendered="#{!accessController.isValidOtp}"/>
+                                        <p:outputLabel value="#{core['label.otp']}"  rendered="#{!accessController.isValidOtp}"/>
 
                                         <p:outputLabel value="#{accessController.otpRecibido}" style="color:black" rendered="#{accessController.isValidOtp}"/>
                                     </div>
@@ -246,7 +246,7 @@
 
                             <div class="row">
                                 <div class="col s4 m4 l4">
-                                    <p:commandButton value="#{app['button.validateotp']}"  styleClass="edit-button rounded-button ui-button-success" 
+                                    <p:commandButton value="#{core['button.validateotp']}"  styleClass="edit-button rounded-button ui-button-success" 
                                                      style="width:100%; background-color: #6b0392;"
                                                      action="#{accessController.validateOtp()}" 
                                                      process="optrecibido,@this"
@@ -267,13 +267,13 @@
                             <div class="row">
                                 <div class="col m12 l12" >
 
-                                    <p:outputLabel value="#{app['label.newpassword']}" />
+                                    <p:outputLabel value="#{core['label.newpassword']}" />
                                     <button id="commandButtonEye2" type="button" onclick="mostrarPasswordGeneral(this, '#form\\:newpassword');" >
                                         <i class="pi pi-eye" style="font-size: 1rem"></i>
 
                                     </button>
                                     <p:password value="#{accessController.newPassword}" id="newpassword"  
-                                                title="#{app['label.newpassword']}"
+                                                title="#{core['label.newpassword']}"
                                                 onkeyup="verificarNivelGeneral(this)"
                                                 redisplay="true" 
                                                 match="repeatpassword"
@@ -335,11 +335,11 @@
 
                             <div class="row">
                                 <div class="col m12 l12" >
-                                    <p:outputLabel value="#{app['label.repetirassword']}" />
+                                    <p:outputLabel value="#{core['label.repetirassword']}" />
                                     <i class="pi pi-lock" style="font-size: 2rem"></i>
                                     <p:password value="#{accessController.repeatPassword}" id="repeatpassword" 
                                                 redisplay="true" 
-                                                title="#{app['label.repetirpassword']}"
+                                                title="#{core['label.repetirpassword']}"
                                                 validator="validarpassword"
                                                 required="true" requiredMessage="#{msg['error.requerido']} #{msg['field.password']}"
                                                 />
@@ -351,8 +351,8 @@
                             </div>
                             <div class="row">
                                 <div class="col m4">
-                                    <p:commandButton value="#{app['button.update']}"  styleClass="edit-button rounded-button ui-button-success" 
-                                                     title="#{app['button.update']}"
+                                    <p:commandButton value="#{core['button.update']}"  styleClass="edit-button rounded-button ui-button-success" 
+                                                     title="#{core['button.update']}"
                                                      style="background-color: #6b0392;"
                                                      action="#{accessController.updatePassword()}"    
                                                      icon="pi pi-save"
@@ -370,7 +370,7 @@
 
                     <div class="row">
                         <div class="col m8">
-                            <p:outputLabel value="#{app['button.forgetpassword']}" style="color:black"/>
+                            <p:outputLabel value="#{core['button.forgetpassword']}" style="color:black"/>
                         </div>
                         <div class="col m4" style="font-size:14px;">
                             <p:toggleSwitch value="#{accessController.isForgetPassword}" >
@@ -382,7 +382,7 @@
                     <div class="row">
                         <div class="col m8">
 
-                            <p:outputLabel rendered="#{!accessController.isForgetPassword}" value="#{app['label.version']}" style="color:black;font-size: 15px"/>
+                            <p:outputLabel rendered="#{!accessController.isForgetPassword}" value="#{core['label.version']}" style="color:black;font-size: 15px"/>
                         </div>
                         <div class="col m4" style="font-size:14px;">
                             <p:outputLabel rendered="#{!accessController.isForgetPassword}" value= "#{accessController.applicativeVersion.get()}" style="color:black"/>
