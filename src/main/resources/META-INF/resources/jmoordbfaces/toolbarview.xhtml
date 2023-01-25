@@ -36,8 +36,8 @@
             <p:commandButton rendered="#{cc.attrs.renderedEdit}" 
 
                              icon="fa fa-edit" 
-                             title="#{app['button.edit']}"  
-                             value="#{app['button.edit']}"  
+                             title="#{core['button.edit']}"  
+                             value="#{core['button.edit']}"  
                              process=":form:content"                             
                              action="#{cc.attrs.controller[cc.attrs.edit]}"
                              look="primary"
@@ -49,12 +49,12 @@
                 <span class="ui-icon pi pi-ellipsis-v" />
             </span>
 
-            <p:commandButton value="#{app['button.delete']}" 
+            <p:commandButton value="#{core['button.delete']}" 
                              rendered="#{cc.attrs.renderedDelete}"
                              action="#{cc.attrs.controller[cc.attrs.delete]}"
                              update=":form:content">
-                <p:confirm header="#{app['info.doyouwantdelete']}"
-                           message="#{app['info.doyouwantdelete']}" icon="pi pi-exclamation-triangle" />
+                <p:confirm header="#{core['info.doyouwantdelete']}"
+                           message="#{core['info.doyouwantdelete']}" icon="pi pi-exclamation-triangle" />
             </p:commandButton>
 
          
@@ -62,8 +62,8 @@
 
             <p:commandButton iconAwesome="fa-print" 
                              rendered="#{cc.attrs.renderedPrint}"
-                             value="#{app['button.print']}"
-                             title="#{app['button.print']}" 
+                             value="#{core['button.print']}"
+                             title="#{core['button.print']}" 
                              process=":form:content"
                              action="#{cc.attrs.controller[cc.attrs.print]}"
                              ajax="false"
@@ -83,7 +83,7 @@
                                          look="primary"
                                          iconAwesome="fa-share" 
                                              rendered="#{cc.attrs.renderedList}"
-                                         title="#{app['button.search']}" 
+                                         title="#{core['button.search']}" 
                                         action="#{cc.attrs.controller[cc.attrs.prepareGoList]}">
                             
                             <f:attribute name="url" value="#{cc.attrs.url}"/>
@@ -94,8 +94,8 @@
         </f:facet>
   </p:toolbar>
       <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-                <p:commandButton value="#{app['button.yes']}"  type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check" />
-                <p:commandButton value="#{app['button.no']}"  type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times" />
+                <p:commandButton value="#{core['button.yes']}"  type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check" />
+                <p:commandButton value="#{core['button.no']}"  type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times" />
             </p:confirmDialog>    
 
     </composite:implementation>

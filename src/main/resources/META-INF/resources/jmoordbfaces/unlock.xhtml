@@ -21,7 +21,7 @@
     <cc:implementation>
 
         <h:panelGroup id="panelGroupUnlock">
-            <p:dialog header="#{app['form.unlock']}"  showEffect="fade"
+            <p:dialog header="#{core['form.unlock']}"  showEffect="fade"
                       modal="true"
                       dynamic="true"
 
@@ -54,7 +54,7 @@
                     </p:outputPanel>
                 </p:outputPanel>
                 <f:facet name="footer">
-                      <p:commandButton value="#{app['button.unlock']}"  
+                      <p:commandButton value="#{core['button.unlock']}"  
                                                  styleClass="edit-button rounded-button ui-button-success" 
                                             
                                                  action="#{cc.attrs.controller.unlockServices.unlock(cc.attrs.position, cc.attrs.widgetVar,cc.attrs.update, cc.attrs.profileList)}" 

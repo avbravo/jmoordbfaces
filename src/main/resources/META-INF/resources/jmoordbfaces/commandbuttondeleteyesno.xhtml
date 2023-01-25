@@ -26,14 +26,14 @@
             <p:row>
                 <p:column>
                    
-                        <p:panel title="#{app['info.doyouwantdelete']}" look="primary">
+                        <p:panel title="#{core['info.doyouwantdelete']}" look="primary">
 
-                            <p:button value="#{app['button.no']}" look="success"  />
+                            <p:button value="#{core['button.no']}" look="success"  />
                             <p:commandButton rendered="#{cc.attrs.rendered}" 
                                              look="danger"
                                              iconAwesome="fa-trash-o" 
-                                             value="#{app['button.yes']}" 
-                                             title="#{app['button.delete']}" 
+                                             value="#{core['button.yes']}" 
+                                             title="#{core['button.delete']}" 
                                              oncomplete="remoteshowall();"
                                              process=":form:dataTable" 
 

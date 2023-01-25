@@ -39,8 +39,8 @@
             <p:commandButton rendered="#{cc.attrs.renderedSave}"                          
                              id="jmoordbjsfCommandButtonSave"
                              iconAwesome="fa-floppy-o"
-                             title="#{app['button.save']}"
-                             value="#{app['button.save']}"
+                             title="#{core['button.save']}"
+                             value="#{core['button.save']}"
                              look="primary"
                              action="#{cc.attrs.controller[cc.attrs.save]}"
                              update=":form:content" > 
@@ -56,8 +56,8 @@
                               immediate="true"
                               
 
-                              value= "#{app['button.clear']}"
-                              title="#{app['button.clear']}"
+                              value= "#{core['button.clear']}"
+                              title="#{core['button.clear']}"
                               action="#{cc.attrs.controller[cc.attrs.prepareNew]}" 
                               update=":form:content" >                 
             </p:commandButton>
@@ -67,10 +67,10 @@
 
             <p:commandButton immediate="true"
                              look="primary"
-                             value= "#{app['button.search']}"
+                             value= "#{core['button.search']}"
                              iconAwesome="fa-share" 
                              rendered="#{cc.attrs.renderedList}"  
-                             title="#{app['button.search']}" 
+                             title="#{core['button.search']}" 
                              action="#{cc.attrs.controller[cc.attrs.prepareGoList]}" >             
                 <f:attribute name="url" value="#{cc.attrs.url}"/>              
             </p:commandButton>

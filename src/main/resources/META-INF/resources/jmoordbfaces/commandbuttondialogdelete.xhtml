@@ -21,18 +21,18 @@
     <composite:implementation>
 
 
-        <p:commandButton value="#{app['button.no']}" look="success" onclick="PF('deleteListDialog').hide();"/>
+        <p:commandButton value="#{core['button.no']}" look="success" onclick="PF('deleteListDialog').hide();"/>
 
         <p:commandButton  look="danger" 
-                          value="#{app['button.yes']}" 
-                          title="#{app['button.delete']}" 
+                          value="#{core['button.yes']}" 
+                          title="#{core['button.delete']}" 
                           onclick="PF('deleteListDialog').hide();"/>
 
         <p:commandButton rendered="#{cc.attrs.rendered}" 
                          look="danger"
                          iconAwesome="fa-trash-o" 
-                         value="#{app['button.yes']}" 
-                         title="#{app['button.delete']}" 
+                         value="#{core['button.yes']}" 
+                         title="#{core['button.delete']}" 
                          oncomplete="remoteshowall();"
                          process=":form:dataTable" 
 

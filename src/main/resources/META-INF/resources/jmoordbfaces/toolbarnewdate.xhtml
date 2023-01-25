@@ -39,7 +39,7 @@
             <p:panelGrid  columns="#{cc.attrs.columns}" size="xs" colSpans="2,1,8,1"> 
                 <p:commandButton  iconAwesome="fa-eraser"         
                                   look="success"
-                                  title="#{app['button.clear']}"
+                                  title="#{core['button.clear']}"
                                   action="#{cc.attrs.controller[cc.attrs.prepareNew]}"  update=":form:content" > 
                     <f:ajax />
                    
@@ -63,7 +63,7 @@
                                  look="primary"
                                  iconAwesome="fa-share" 
                                  rendered="#{cc.attrs.rendererList}" 
-                                 title="#{app['button.search']}" 
+                                 title="#{core['button.search']}" 
                                  action="#{cc.attrs.controller[cc.attrs.prepareGoList]}">                
                     
                 </p:commandButton>

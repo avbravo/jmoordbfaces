@@ -11,15 +11,15 @@
     <composite:implementation>
 
         <h:form id="jmoordbjsfformaccesodenegado" rendered="#{cc.attrs.rendered}">
-            <p:panel title="#{app['title.accesodenegado']}" id="content"   look="primary" > 
+            <p:panel title="#{core['title.accesodenegado']}" id="content"   look="primary" > 
 
                 <p:jumbotron>
-                    <h1><p:outputLabel value="#{app['title.accesodenegado']}"/></h1>
-                    <p><p:outputLabel value="#{app['label.notieneprivilegios']}"/></p>
-                    <p><p:outputLabel value="#{app['label.debeloguearse']}"/></p>
+                    <h1><p:outputLabel value="#{core['title.accesodenegado']}"/></h1>
+                    <p><p:outputLabel value="#{core['label.notieneprivilegios']}"/></p>
+                    <p><p:outputLabel value="#{core['label.debeloguearse']}"/></p>
                     <p></p>
                     <p> <p:commandButton look="danger" action="#{loginController.irLogin}"
-                                         value="#{app['button.login']}" ajax="false"/></p>
+                                         value="#{core['button.login']}" ajax="false"/></p>
 
 
                 </p:jumbotron>

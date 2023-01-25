@@ -47,7 +47,7 @@
 
                 <p:commandButton   icon="fa fa-step-backward"
                                    styleClass="ui-priority-primary"
-                                   title="#{app['button.first']}"
+                                   title="#{core['button.first']}"
 
                                    oncomplete="remoteshowall();"
                                    action="#{cc.attrs.controller[cc.attrs.first]}"
@@ -58,7 +58,7 @@
 
                 <p:commandButton   icon="fa fa-caret-left"
                                    styleClass="ui-priority-primary"
-                                   title="#{app['button.back']}"
+                                   title="#{core['button.back']}"
 
                                    oncomplete="remoteshowall();"
                                    action="#{cc.attrs.controller[cc.attrs.back]}"
@@ -67,7 +67,7 @@
                 </p:commandButton>
 
                 <p:commandButton   icon="fa fa-play"
-                                   title="#{app['button.next']}"
+                                   title="#{core['button.next']}"
                                    oncomplete="remoteshowall();"
                                    action="#{cc.attrs.controller[cc.attrs.next]}"
 
@@ -77,7 +77,7 @@
                 </p:commandButton>
 
                 <p:commandButton  icon="fa fa-step-forward"
-                                  title="#{app['button.last']}"
+                                  title="#{core['button.last']}"
                                   oncomplete="remoteshowall();"
 
                                   action="#{cc.attrs.controller[cc.attrs.last]}"

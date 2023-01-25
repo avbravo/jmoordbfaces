@@ -16,9 +16,9 @@
     <composite:implementation>
 
         <p:commandButton rendered="#{cc.attrs.rendered}"                          
-                         value="#{app['button.edit']}"
+                         value="#{core['button.edit']}"
                          iconAwesome="fa-edit"
-                         title="#{app['button.edit']}"
+                         title="#{core['button.edit']}"
                         
                          action="#{cc.attrs.edit}" 
                          update=":form:content" /> 

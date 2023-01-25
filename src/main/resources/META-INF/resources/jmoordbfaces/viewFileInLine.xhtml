@@ -28,7 +28,7 @@
 
                     <p:outputPanel >
                         <div class="p-field">
-                            <p:outputLabel value="#{app['field.numbersimbolo']}"/>
+                            <p:outputLabel value="#{core['field.numbersimbolo']}"/>
                             <p:outputLabel  value="#{cc.attrs.label}"/>
                         </div>
 
@@ -39,7 +39,7 @@
 
 
                             <div class="p-field">
-                                <p:commandButton  value="#{app['button.download']}" ajax="false"
+                                <p:commandButton  value="#{core['button.download']}" ajax="false"
                                                  onclick="PrimeFaces.monitorDownload(start, stop);"
                                                  icon="pi pi-cloud-download" styleClass="p-mr-2"                                                       
                                                  >
@@ -66,7 +66,7 @@
 
                             <p:outputPanel rendered="#{!jMoordbMediaManager.isImage(cc.attrs.field)}">
                                 <i class="pi pi-exclamation-triangle" style="font-size: 2rem"></i>
-                                <p:outputLabel value="#{app['label.filenotshow']}" rendered="#{!jMoordbMediaManager.isImage(cc.attrs.field)}"/>
+                                <p:outputLabel value="#{core['label.filenotshow']}" rendered="#{!jMoordbMediaManager.isImage(cc.attrs.field)}"/>
 
                             </p:outputPanel>
 
